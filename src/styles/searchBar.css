@@ -1,0 +1,35 @@
+.input__container {
+    background-color: white;
+    position: absolute;
+    width: 450px;
+    z-index: 2;
+    min-height: 40px;
+    border-radius: 18px;
+    border: 2px solid #0166f4;
+    font-size: 20px;
+}
+.input__container  input {
+    width: 420px;
+    padding: 0 15px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 50px 0 0 0;
+    background-color: transparent;
+}
+
+.input__container div:hover {
+    background-color: #ececec;
+}
+
+.input__container div:last-child {
+    border-radius: 0 0 18px 18px;
+}
+
+.search__container {
+    min-width: 1200px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,15 @@
+ img{
+    width: 270px;
+    height: 45px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+.nav__container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-left: 35px;
+    padding-top: 15px;
+}

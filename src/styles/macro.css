@@ -1,0 +1,20 @@
+.macro__container{
+    min-width: 884px;
+    max-height: 600px;
+    background-color: white;
+    border: 1px solid #87675c;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 70px;
+    z-index: 1;
+}
+
+.macro__container #text {
+    width:90%;
+    border: none;
+    outline: none;
+    padding: 25px;
+    white-space: pre-wrap;
+    text-align: start;
+    font-size: 16px;
+}

@@ -1,0 +1,16 @@
+.action_button {
+    min-width: 120px;
+    min-height: 40px;
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+.action_button:hover {
+    background-color: rgba(155, 155, 212, 0.733);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
