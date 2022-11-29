@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #c6cacd;
-    z-index: 3;
+    z-index: 4;
 }
 .edit__container {
     display: flex;

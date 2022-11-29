@@ -9,9 +9,10 @@ import { AppContext } from './context/AppContext';
 import PopUp from './components/PopUp';
 import Create from './components/Create';
 import Notification from './components/Notification';
+import DeleteConfirm from './components/DeleteConfirm';
 
 function App() {
- const {setdisplayCreateMacro, setdisplayPopUpEdit, currentMacro, setSuccess, setError, setCopied} = useContext(AppContext);
+ const {setdisplayCreateMacro, setdisplayPopUpEdit, currentMacro, deleteConfirm, setSuccess, setError, setCopied,setDeleteconfirm} = useContext(AppContext);
  const [display, setDisplay] = useState('none');
 
   const copyToClipBoard = () => {
@@ -41,6 +42,10 @@ function App() {
   const showPopUp = () => {
     setdisplayPopUpEdit(true);
   }
+
+  const showDeleteconfirm = () => {
+    setDeleteconfirm(true);
+}
   
  useEffect(() => {
   if (currentMacro[0]?.id === undefined) {
@@ -56,6 +61,7 @@ function App() {
       <div className="App">
         <Create/>
         <PopUp/>
+        <DeleteConfirm />
         <Notification />
         <Copied text='Succesfully Copied'/>
         <SearchBar/>
@@ -65,7 +71,10 @@ function App() {
             <Button color='#0166f4' border='1px solid #0166f4' onClick={showCreate} text ={'Create'}/>
             <Button color='#0166f4' border='1px solid #0166f4' display={display} onClick={showPopUp} text ={'Edit'}/>
           </div>
-          <Button backgroundColor='#0166f4' display={display} onClick ={copyToClipBoard} text ={'Copy'}/>
+          <div className='delete__buttons'>
+            <Button backgroundColor='#db3f40' display={display} onClick ={showDeleteconfirm} text ={'Delete'}/>
+            <Button backgroundColor='#0166f4' display={display} onClick ={copyToClipBoard} text ={'Copy'}/>
+          </div>
         </div>
       </div>
     </>

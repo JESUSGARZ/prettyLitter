@@ -13,7 +13,8 @@ const ContextProvider = ({children}) => {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
     const [copied, setCopied] = useState(false);
-    const [notification, setNotification] = useState('')
+    const [notification, setNotification] = useState('');
+    const [deleteConfirm, setDeleteconfirm] = useState(false);
     
     const fetchData = () => {
         try {
@@ -45,6 +46,8 @@ const ContextProvider = ({children}) => {
         setCopied,
         notification,
         setNotification,
+        deleteConfirm,
+        setDeleteconfirm,
         displayCreateMacro,
         setdisplayCreateMacro,
         displayPopUpEdit,
